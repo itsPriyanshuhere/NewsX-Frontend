@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useAuth } from '../context/auth';
 
 function Navbar() {
@@ -59,36 +59,36 @@ function Navbar() {
           <div className="hidden sm:flex space-x-4">
           <nav>
             <div className="flex flex-row justify-between sm:flex sm:flex-column">
-                <a href="/" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
+                <Link to="/" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
                   <button>Home</button>
-                </a>
-                <a href="/top-articles" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
+                </Link>
+                <Link to="/top-articles" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
                   <button>Top Articles</button>
-                </a>
-                <a href="/userforum" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
-                  <button>Userforum</button>
-                </a>
+                </Link>
+                <Link to="/userforum" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
+                  <button>Top Articles</button>
+                </Link>
                 {auth.user && (
-                  <a href="/profile" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
-                    <button>Profile</button>
-                  </a>
+                  <Link to="/profile" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
+                  <button>Profile</button>
+                </Link>
                 )}
             {
             !auth.user ? 
             (<>
-              <a href="/login" className="ml-28 pt-5 pr-6 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
-                <button>Join Us</button>
-              </a>
+              <Link to="/login" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
+                  <button>Join Us</button>
+                </Link>
             </>) :
             (<>
-              <a href="/login" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
+              <Link to="/login" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
                 <button onClick={handleLogout}>Logout</button>
-              </a>
+              </Link>
             </>)
             }
-              <a href="/newpost" className="pr-16 pt-3 text-4xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
+              <Link to="/newpost" className="pr-16 pt-3 text-4xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
                   <button>+</button>
-                </a>
+                </Link>
             </div>
             </nav>
           </div>
