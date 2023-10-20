@@ -13,7 +13,7 @@ function Navbar() {
       token: '',
     });
     localStorage.removeItem('auth');
-    toggleMenu();
+    // toggleMenu();
   };
 
   const toggleMenu = () => {
