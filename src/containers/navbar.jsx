@@ -81,9 +81,9 @@ function Navbar() {
                 </Link>
             </>) :
             (<>
-              <Link to="/login" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
+              <NavLink to="/login" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
                 <button onClick={handleLogout}>Logout</button>
-              </Link>
+              </NavLink>
             </>)
             }
               <Link to="/newpost" className="pr-16 pt-3 text-4xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
