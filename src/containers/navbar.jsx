@@ -66,7 +66,7 @@ function Navbar() {
                   <button>Top Articles</button>
                 </Link>
                 <Link to="/userforum" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
-                  <button>Top Articles</button>
+                  <button>UserForum</button>
                 </Link>
                 {auth.user && (
                   <Link to="/profile" className="pr-12 pt-5 text-xl font-thin transition ease-in-out text-white delay-100 drop-shadow-lg drop-shadow-red-500 hover:-translate-y-1 hover:scale-110 hover:text-red-500 hover:shdaow-lg duration-300 ...">
